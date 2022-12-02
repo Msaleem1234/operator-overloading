@@ -1,0 +1,138 @@
+using System;
+namespace operator_overloadin
+{
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the sign for Addtions  and Subtration ");
+            string opr =Console.ReadLine();
+
+            switch (opr)
+            {
+                case "+":
+                    Console.WriteLine("How much values to enter for addtion ");
+                    int m =Convert.ToInt32( Console.ReadLine());
+                    switch (m)
+                    {
+                        case 2:
+                            Console.WriteLine("Enter the first value");
+                           int  a=Convert.ToInt32( Console.ReadLine());
+                            Console.WriteLine("Enter the second  value");
+                          int b = Convert.ToInt32(Console.ReadLine());
+                            Addtion addtion1  = new Addtion(a,b);
+                            break;
+                        case 3:
+                            Console.WriteLine("Enter the first value");
+                           a = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("Enter the second  value");
+                             b = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("Enter the third  value");
+                         int c = Convert.ToInt32(Console.ReadLine());
+                            Addtion addtion2 = new Addtion(a, b, c);
+                            break;
+                            case 4:
+                            Console.WriteLine("Enter the first value");
+                             a = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("Enter the second  value");
+                             b = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("Enter the third  value");
+                            c = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("Enter the fourth  value");
+                            int d = Convert.ToInt32(Console.ReadLine());
+                          Addtion addtion3  = new Addtion(a, b, c, d);
+                            break;
+                            default:
+                            Console.WriteLine("Choice other than  2,3 and 4");
+                            break;
+
+                    }
+                    break;
+                case"-" :
+                    Console.WriteLine("How much values to enter for addtion ");
+                    int n = Convert.ToInt32(Console.ReadLine());
+                    switch (n)
+                    {
+                        case 2:
+                            Console.WriteLine("Enter the first value");
+                            int a = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("Enter the second  value");
+                            int b = Convert.ToInt32(Console.ReadLine());
+                            Subtration subtration1  = new Subtration(a, b);
+                            break;
+                        case 3:
+                            Console.WriteLine("Enter the first value");
+                            a = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("Enter the second  value");
+                            b = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("Enter the third  value");
+                            int c = Convert.ToInt32(Console.ReadLine());
+                            Subtration subtration2  = new Subtration(a, b, c);
+                            break;
+                        case 4:
+                            Console.WriteLine("Enter the first value");
+                            a = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("Enter the second  value");
+                            b = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("Enter the third  value");
+                            c = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("Enter the fourth  value");
+                            int d = Convert.ToInt32(Console.ReadLine());
+                            Subtration subtration3 = new Subtration(a, b, c, d);
+                            break;
+                        default:
+                            Console.WriteLine("Choice other than  2,3 and 4");
+                            break;
+
+                    }
+                    break;
+              
+                default:
+                    Console.WriteLine("Choice other than +,-");
+                    break;
+            }
+        }
+    }
+    public class Addtion
+    {
+
+        public Addtion(int a, int b) 
+        {
+           int sum =a + b;
+            Console.WriteLine($"the sum of Two values the answer is : {sum}");
+        }
+        public Addtion(int a, int b,int c)
+        {
+            int sum = a + b + c;
+            Console.WriteLine($"the sum of three values the answer is : {sum}");
+        }
+        public Addtion(int a, int b, int c, int d)
+        {
+            int sum = a + b + c + d;
+            Console.WriteLine($"the sum of four values the answer is : {sum}");
+        }
+
+        
+    }
+    public class Subtration 
+    {
+       
+
+        public Subtration(int a, int b)
+        {
+            int sub = a - b;
+            Console.WriteLine($"subtraction of two values the answer is : {sub}");
+        }
+        public Subtration(int a, int b, int c)
+        {
+            int sub = a - b - c;
+            Console.WriteLine($"subtraction of three values the answer is : {sub}");
+        }
+        public Subtration(int a, int b, int c, int d)
+        {
+            int sub = a - b - c - d;
+            Console.WriteLine($"subtraction of four values the answer is : {sub}");
+        }
+    }
+}
